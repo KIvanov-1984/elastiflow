@@ -22,7 +22,7 @@ networks:
 
 services:
   elastiflow-elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.8.1
+    image: elastic/elasticsearch:7.8.1
     container_name: elastiflow-elasticsearch
     restart: 'no'
     ulimits:
@@ -64,7 +64,7 @@ services:
       action.destructive_requires_name: 'true'
 
   elastiflow-kibana:
-    image: docker.elastic.co/kibana/kibana:7.8.1
+    image: elastic/kibana:7.8.1
     container_name: elastiflow-kibana
     restart: 'no'
     depends_on:
